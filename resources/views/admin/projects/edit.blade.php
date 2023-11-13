@@ -42,7 +42,7 @@
                     </div>
 
                     <div class="mb-3">
-                        <label for="type_id" class="form-label">Choose a Typology</label>
+                        <label for="type_id" class="form-label">Choose a Type</label>
                         <select class="form-select form-select @error('type_id') is-invalid @enderror" name="type_id" id="type_id">
                             <option selected disabled>Select one</option>
                             <option>Untyped</option>
@@ -69,17 +69,6 @@
                         @enderror
                     </div>
 
-                    <div class="mb-3">
-
-                        <label for="type" class="form-label"><strong>Technologies Used</strong></label>
-
-                        <input type="text" class="form-control" name="type" id="type"
-                            aria-describedby="helpType" value="{{ old('type') ? old('type') : $project->type }}">
-
-                        @error('type')
-                            <div class="text-danger">{{ $message }}</div>
-                        @enderror
-                    </div>
 
                     <div class="mb-3">
 

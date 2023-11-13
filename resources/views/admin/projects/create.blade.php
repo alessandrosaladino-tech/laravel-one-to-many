@@ -37,6 +37,20 @@
                     </div>
 
                     <div class="mb-3">
+                        <label for="type_id" class="form-label"><strong>Project Type</strong></label>
+                        <select class="form-select form-select @error('type_id') is-invalid @enderror" name="type_id"
+                            id="type_id">
+                            <option selected>Select a Type</option>
+                            <option value="">Untyped</option>
+                            @foreach ($types as $type)
+                                <option value="{{ $type->id }}" 
+                                    {{ $type->id == old('type_id') ? 'selected' : '' }}>
+                                    {{ $type->name }}
+                                </option>
+                            @endforeach
+                        </select>
+
+                    <div class="mb-3">
 
                         <label for="description" class="form-label"><strong>Description</strong></label>
 
@@ -62,17 +76,6 @@
                             value="{{ old('public_link') }}">
                     </div>
 
-                    <div class="mb-3">
-
-                        <label for="type" class="form-label"><strong>Project Type</strong></label>
-
-                        <input type="text" class="form-control" name="type" id="type"
-                            aria-describedby="helpTitle" placeholder="Type of the project (Es. HTML, JavaScript, ecc.)">
-
-                        @error('tech')
-                            <div class="text-danger">{{ $message }}</div>
-                        @enderror
-                    </div>
 
                     <div class="mb-3">
 

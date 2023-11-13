@@ -33,7 +33,7 @@
 
                     <div class="card-body">
                         <p><strong>Description: </strong>{{ $project->description }}</p>
-                        <p><strong>Technologies used: </strong>{{ $project->type }}</p>
+                        <p><strong>Project Type: </strong>{{$project->type->name ? $project->type->name : 'Untyped'}}</p>
                         <p><strong>GitHub Link :</strong> {{$project->github_link}}</p>
                         <p><strong>Public Project Link :</strong> {{$project->public_link}}</p>
                         <p><strong>Release Date :</strong> {{$project->release_date}}</p>
