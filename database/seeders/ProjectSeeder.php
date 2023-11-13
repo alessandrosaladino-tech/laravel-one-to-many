@@ -33,7 +33,7 @@ class ProjectSeeder extends Seeder
             $new_project->description = $project['description'];
             $new_project->thumb = $project['thumb'];
             $new_project->release_date = $project['release_date'];
-            $new_project->type = $project['type'];
+            $new_project->type_id = $project['type_id'];
             $new_project->github_link = $project['github_link'];
             $new_project->public_link = $project['public_link'];
             //save data
