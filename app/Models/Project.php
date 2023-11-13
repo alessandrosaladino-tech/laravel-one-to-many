@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\Type;
 use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -12,7 +13,7 @@ class Project extends Model
 {
     use HasFactory, SoftDeletes;
 
-    protected $fillable = ['title', 'slug', 'thumb', 'description', 'type', 'github_link', 'public_link', 'release_date'];
+    protected $fillable = ['type_id','title', 'slug', 'thumb', 'description', 'github_link', 'public_link', 'release_date'];
 
     public function type(): BelongsTo
     {
