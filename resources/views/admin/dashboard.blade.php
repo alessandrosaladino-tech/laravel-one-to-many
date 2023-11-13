@@ -31,6 +31,16 @@
                     </div>
                 </div>
             </div>
+
+            <div class="col">
+                <div class="card">
+                    <h6 class="card-header text-uppercase">User</h6>
+
+                    <div class="card-body">
+                        <strong>Total Users:</strong> {{ $total_users }}
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 @endsection
